@@ -1,5 +1,15 @@
 #!/usr/bin/python3
 
+### 	Use pandoc to convert docx to html before using script
+###
+###	pandoc -f docx -t html <name_of_document.docx> -o <name_of_output.html>
+###
+###	Changes h4 -> h5; h3 -> h4; h2 -> h3; h1 -> h2
+###
+###	Removes id, class from tags unless they are in TOC
+###	Removes <strong> if it is covering the whole content of a tag - Unless it is in TOC (choice og design until now)
+###	Removes pagenumbers from TOC text
+
 import sys
 
 file_name = sys.argv[1]
